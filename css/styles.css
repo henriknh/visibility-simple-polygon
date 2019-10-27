@@ -1,0 +1,100 @@
+html, body {
+  width:  100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: rgba(222,222,222,1);
+}
+
+/*
+ *  TOASTS
+ */
+#toasts {
+  display: table-cell;
+  vertical-align: bottom;
+  z-index: 200;
+  position: absolute;
+  bottom: 0;
+}
+#toasts div {
+  width: 200px;
+  text-align: center;
+  padding: 4px;
+  border-radius: 3px;
+  margin: 6px;
+
+}
+#toasts .info {
+  background-color: lightgreen;
+}
+#toasts .error {
+  background-color: tomato;
+}
+
+/*
+ *  MODALS
+ */
+#modalBackground {
+  position: absolute;
+  z-index: 50;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+#import, #export {
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -100px;
+  display: none;
+  z-index: 100;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: rgba(245,245,245,1);
+  padding: 10px;
+}
+#import textarea, #export textarea {
+  width: 300px;
+  height: 155px;
+  padding: 0px;
+  resize: none;
+}
+#import button, #export button {
+  float: right;
+}
+
+/*
+ *  MENU
+ */
+nav {
+  width: 100%;
+  z-index: 10;
+  position: absolute;
+  padding: 4px;
+}
+
+/*
+ *  STATS
+ */
+#stats {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 2px;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/*
+ *  CANVAS
+ */
+#c {
+  position: absolute;
+  float: left;
+  height: 100%;
+  width: 100%;
+}

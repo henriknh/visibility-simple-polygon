@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Visibility of a Simple Polygon</title>
+  <meta name="description" content="Visibility of a Simple Polygon">
+  <meta name="author" content="Henrik Nilsson Harnert">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div id="toasts"></div>
+
+  <div id="modalBackground" onclick="closeModal()"></div>
+  <div id="import">
+    <span>Import</span>
+    <textarea id="textareaImport"></textarea>
+    <br>
+    <button onclick="closeModal()">Close</button>
+    <button onclick="onClickImportPolygon()">Import</button>
+  </div>
+  <div id="export">
+    <span>Export</span>
+    <textarea id="textareaExport"></textarea>
+    <br>
+    <button onclick="closeModal()">Close</button>
+  </div>
+
+  <nav>
+    <span>
+      <label>Mode:</label>
+
+      <input type="radio" name="mode" id="r1" value="0" checked />
+      <label for="r1">None</label>
+      <input type="radio" name="mode" id="r2" value="1" />
+      <label for="r2">Place vertices</label>
+      <input type="radio" name="mode" id="r3" value="2" />
+      <label for="r3">Move eye</label>
+
+      <button type="button" onclick="clearCanvas()">Clear canvas</button>
+    </span>
+    <span style="float: right;">
+      <input type="checkbox" id="checkboxCoords" checked>
+      <label for="checkboxCoords">Display coordinates</label>
+
+      <input type="checkbox" id="checkboxDebug" checked>
+      <label for="checkboxDebug">Debug</label>
+
+      <button type="button" onclick="showModal('import')">Import</button>
+      <button type="button" onclick="showModal('export')">Export</button>
+    </span>
+
+
+
+  </nav>
+
+  <table id="stats">
+    <tr>
+      <td>Draw:</td>
+      <td id="statsDraw">1ms</td>
+    </tr>
+    <tr>
+      <td>Calc:</td>
+      <td id="statsCalc">15ms</td>
+    </tr>
+  </table>
+
+  <canvas id="c" width="100" height="100"></canvas>
+  <script src="js/visibility.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
